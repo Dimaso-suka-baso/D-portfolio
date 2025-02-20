@@ -1,0 +1,826 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Scrollbar styling for WebKit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1E1E1E; /* Dark Gray */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #4A90E2, #6A5ACD); /* Deep Blue to Slate Blue */
+    border-radius: 10px;
+}
+
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #E0E0E0; /* Light Gray */
+    background-color: #121212; /* Dark Background */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #1E1E1E; /* Dark Gray */
+    color: #E0E0E0; /* Light Gray */
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #E0E0E0; /* Light Gray */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4A90E2; /* Deep Blue */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1E1E1E, #2C2C2C); /* Dark Gray to Slightly Lighter Gray */
+    color: #E0E0E0; /* Light Gray */
+    padding: 120px 0 50px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(74, 144, 226, 0.7); /* Subtle glow effect */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #B0B0B0; /* Soft Gray */
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #4A90E2, #6A5ACD); /* Deep Blue to Slate Blue */
+    color: #E0E0E0; /* Light Gray */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.7); /* Subtle glow effect */
+}
+
+.cta-button:hover {
+    background: linear-gradient(135deg, #6A5ACD, #4A90E2); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Hero Image */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pulse Graphic */
+.graphic {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.graphic::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: linear-gradient(45deg, #4A90E2, #6A5ACD); /* Deep Blue to Slate Blue */
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* About Section */
+.about {
+    padding: 80px 0;
+    background-color: #1E1E1E; /* Dark Gray */
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #4A90E2; /* Deep Blue */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-image {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    flex: 1;
+    color: #E0E0E0; /* Light Gray */
+}
+
+/* Skills Section */
+/* Skills Section */
+.skills {
+    padding: 80px 0;
+    background-color: #1E1E1E; /* Warna latar belakang */
+}
+
+.skills h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #4A90E2; /* Warna judul */
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsif grid */
+    gap: 20px; /* Jarak antar card */
+    padding: 0 20px; /* Padding untuk responsif */
+}
+
+.skill-card {
+    background-color: #2C2C2C; /* Warna latar belakang card */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px); /* Efek hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #4A90E2; /* Warna judul card */
+}
+
+.skill-card p {
+    font-size: 0.9rem;
+    color: #B0B0B0; /* Warna teks deskripsi */
+    line-height: 1.6;
+}
+
+/* Experience Section */
+/* Experience Section */
+.experience {
+    padding: 80px 0;
+    background-color: #1E1E1E; /* Warna latar belakang */
+}
+
+.experience h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #4A90E2; /* Warna judul */
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif grid */
+    gap: 20px; /* Jarak antar card */
+    padding: 0 20px; /* Padding untuk responsif */
+}
+
+.project-card {
+    background-color: #2C2C2C; /* Warna latar belakang card */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Efek hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Gambar menyesuaikan ukuran card */
+}
+
+.project-card h3 {
+    padding: 20px 20px 10px;
+    color: #4A90E2; /* Warna judul card */
+}
+
+.project-card p {
+    padding: 0 20px 20px;
+    color: #B0B0B0; /* Warna teks deskripsi */
+}
+
+/* Certificates Section */
+.certificates {
+    padding: 80px 0;
+    background-color: #121212; /* Dark Background */
+}
+
+.certificates h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #6A5ACD; /* Slate Blue */
+}
+
+.certificate-grid {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the certificate card */
+}
+
+.certificate-card {
+    background-color: #1E1E1E; /* Dark Gray */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    width: 100%; /* Full width for the card */
+    max-width: 600px; /* Limit the max width */
+    text-align: center; /* Center text */
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+ }
+
+.certificate-content {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Vertical layout */
+    align-items: center; /* Center items */
+    padding: 20px; /* Padding for the content */
+}
+
+.certificate-info {
+    margin-bottom: 20px; /* Space between info and button */
+}
+
+.certificate-info h3 {
+    margin: 10px 0;
+    color: #6A5ACD; /* Slate Blue */
+}
+
+.certificate-info p {
+    color: #B0B0B0; /* Soft Gray */
+}
+
+.view-certificate-btn {
+    display: inline-block; /* Make it an inline block for padding */
+    background-color: #6A5ACD; /* Slate Blue */
+    color: #E0E0E0; /* Light Gray */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.view-certificate-btn:hover {
+    background-color: #4A90E2; /* Deep Blue on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.view-certificate-btn:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 4px rgba(106, 90, 205, 0.5); /* Custom focus outline */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .certificate-card {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .certificate-card embed {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 0;
+    background-color: #1E1E1E; /* Dark Gray */
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #4A90E2; /* Deep Blue */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #4A90E2; /* Deep Blue */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #2C2C2C; /* Slightly Lighter Gray */
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #1E1E1E; /* Dark Gray */
+    color: #E0E0E0; /* Light Gray */
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    color: #E0E0E0; /* Light Gray */
+    background: #4A90E2; /* Deep Blue */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.7); /* Deep Blue shadow */
+    text-decoration: none;
+    margin-bottom: 50px;
+}
+
+.submit-btn:hover {
+    background-color: #6A5ACD; /* Slate Blue */
+}
+
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.result.success {
+    background-color: #2E7D32; /* Dark Green */
+    color: #E0E0E0; /* Light Gray */
+}
+
+.result.error {
+    background-color: #C62828; /* Dark Red */
+    color: #E0E0E0; /* Light Gray */
+}
+
+/* Popup Message */
+.popup-message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1E1E1E; /* Dark Gray */
+    color: #E0E0E0; /* Light Gray */
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity 0.5s ease -in-out;
+    z-index: 1000;
+}
+
+.popup-message.fade-out {
+    opacity: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .hero {
+        padding: 100px 0 40px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content, .hero-image {
+        margin-bottom: 40px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .graphic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about h2, .skills h2, .experience h2 {
+        font-size: 1.75rem;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(45deg, #4A90E2, #6A5ACD); /* Deep Blue to Slate Blue */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to sections */
+.section {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 0.6s forwards; /* Animation properties */
+}
+
+/* Add a class to trigger the animation when in view */
+.section.visible {
+    opacity: 1; /* Make visible */
+}
+
+.get-in-touch {
+    padding: 80px 0;
+    background-color: #1E1E1E; /* Dark Gray */
+    text-align: center;
+}
+
+.get-in-touch h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #E0E0E0; /* Light Gray */
+}
+
+.social-media-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between icons */
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    background-color: #2C2C2C; /* Slightly Lighter Gray */
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: #E0E0E0; /* Light Gray */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link img {
+    width: 24px; /* Icon size */
+    height: 24px;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.social-link:hover {
+    background-color: #4A90E2; /* Deep Blue on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+@media (max-width: 768px) {
+    .social-media-links {
+        flex-direction: column; /* Stack icons vertically */
+        gap: 15px; /* Space between icons */
+    }
+}
+
+.contact-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between sections */
+    align-items: flex-start; /* Align items at the start */
+    padding: 40px; /* Add padding around the container */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.contact-section, .get-in-touch {
+    flex: 1; /* Allow both sections to grow equally */
+    margin: 0 20px; /* Add margin between sections */
+    min-width: 300px; /* Set a minimum width for better responsiveness */
+}
+
+.contact-section {
+    background-color: #1E1E1E; /* Dark Gray for contact section */
+    padding: 20px; /* Padding inside contact section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
+}
+
+.get-in-touch {
+    background-color: #1E1E1E; /* Dark Gray for get in touch section */
+    color: #E0E0E0; /* Light Gray for text */
+    padding: 20px; /* Padding inside get in touch section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #4A90E2; /* Deep Blue for label */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #2C2C2C; /* Slightly Lighter Gray for input borders */
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #1E1E1E; /* Dark Gray for input background */
+    color: #E0E0E0; /* Light Gray for input text */
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #4A90E2; /* Deep Blue */
+    color: #E0E0E0; /* Light Gray */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #6A5ACD; /* Slate Blue */
+}
+
+/* Social Media Links */
+.social-media-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between icons */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    background-color: #2C2C2C; /* Slightly Lighter Gray */
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: #E0E0E0; /* Light Gray */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link img {
+    width: 24px; /* Icon size */
+    height: 24px;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.social-link:hover {
+    background-color: #4A90E2; /* Deep Blue on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Stack sections vertically on small screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .contact-section, .get-in-touch {
+        margin: 10px 0; /* Adjust margin for stacked layout */
+        width: 100%; /* Full width for each section */
+    }
+}
+
+/* Flip Card Animation */
+/* Flip Card Animation */
+/* Flip Card Animation */
+.skill-card, .project-card {
+    perspective: 1000px; /* Menentukan perspektif untuk efek 3D */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d; /* Mempertahankan efek 3D */
+    transition: transform 0.8s ease;
+}
+
+.skill-card.flipped, .project-card.flipped {
+    transform: rotateY(180deg); /* Membalik card saat class 'flipped' ditambahkan */
+}
+
+.skill-card-front, .skill-card-back,
+.project-card-front, .project-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Sembunyikan sisi belakang card saat tidak dibalik */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #2C2C2C; /* Warna latar belakang card */
+    color: #E0E0E0; /* Warna teks */
+}
+
+.skill-card-back, .project-card-back {
+    transform: rotateY(180deg); /* Sisi belakang card dimulai dalam keadaan terbalik */
+    background-color: #4A90E2; /* Warna latar belakang sisi belakang */
+}
+
+/* Animasi saat card muncul saat scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill-card, .project-card {
+    opacity: 0; /* Mulai dengan card tersembunyi */
+    animation: fadeInUp 0.8s ease-out forwards; /* Animasi muncul saat scroll */
+}

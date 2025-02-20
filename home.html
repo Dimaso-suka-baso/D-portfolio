@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Futuristik</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="image/logo.png" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to my portfolio</h1>
+                <p>In this website I store my projects, click the button below to know more</p>
+                <a href="#about" class="cta-button">click me!</a>
+            </div>
+            <div class="hero-image">
+                <div class="graphic"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="image/dimas.png" alt="About Me Image">
+                </div>
+                <div class="about-text">
+                    <p>Hello, I am a passionate web developer dedicated to creating applications and portfolios using the latest technologies. 
+                     I love learning new things and growing in the digital world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="skills" class="skills">
+    <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="image/js.png" alt="JavaScript Logo">
+                <h3>JavaScript</h3>
+                <p>Modern ES6+ syntax, async programming, and DOM manipulation.</p>
+            </div>
+            <div class="skill-card">
+                <img src="image/sql.png" alt="MySQL Logo">
+                <h3>MySQL</h3>
+                <p>Database design, complex queries, and performance optimization.</p>
+            </div>
+            <div class="skill-card">
+                <img src="image/php.png" alt="PHP Logo">
+                <h3>PHP</h3>
+                <p>Object-oriented programming, MVC architecture, and RESTful APIs.</p>
+            </div>
+            <div class="skill-card">
+                <img src="image/html.png" alt="HTML Logo">
+                <h3>HTML</h3>
+                <p>Semantic markup, accessibility best practices, and HTML5 features.</p>
+            </div>
+            <div class="skill-card">
+                <img src="image/css.png" alt="CSS Logo">
+                <h3>CSS</h3>
+                <p>Responsive design, Flexbox, Grid, and CSS animations.</p>
+            </div>
+            <div class="skill-card">
+                <img src="image/laravel.png" alt="Laravel Logo">
+                <h3>Laravel</h3>
+                <p>Full-stack development, Eloquent ORM, and Blade templating.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="experience" class="experience">
+    <div class="container">
+        <h2>Experience</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="image/movie.png" alt="Project 1 Screenshot">
+                <h3>Cinema Website</h3>
+                <p>I make a cinema website using Laravel 11.</p>
+            </div>
+            <div class="project-card">
+                <img src="image/logo game.jpg" alt="Project 2 Screenshot">
+                <h3>Delussion</h3>
+                <p>Game in Roblox platform.</p>
+            </div>
+            <div class="project-card">
+                <img src="image/jago.png" alt="Project 3 Screenshot">
+                <h3>Talent Registration Form</h3>
+                <p>A website from a teaching factory program.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2>My Certificate</h2>
+            <div class="certificate-grid">
+                <div class="certificate-card">
+                    <div class="certificate-content">
+                        <embed src="image/digitalent certificate.pdf" type="application/pdf" width="100%" height="400px">
+                        <div class="certificate-info">
+                            <h3>Data Analytics Training</h3>
+                            <p>Issued by: Puslitbang SDP3I</p>
+                        </div>
+                        <a href="image/digitalent certificate.pdf" target="_blank" class="view-certificate-btn">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="contact-container">
+        <div class="contact-section">
+            <h2>Contact Me</h2>
+            <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="9ade0db7-2b22-42b0-b1dd-d5f8b255c8bc">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        <div class="get-in-touch">
+            <h2>Get in Touch</h2>
+            <div class="social-media-links">
+                <a href="https://www.instagram.com/dims.k0zn/" target="_blank" class="social-link">
+                    <img src="image/ig.png" alt="Instagram">
+                    Instagram
+                </a>
+                <a href="https://wa.me/qr/KCOYUCMDM47PO1" target="_blank" class="social-link">
+                    <img src="image/wa.png" alt="WhatsApp">
+                    WhatsApp
+                </a>
+                <a href="http://www.linkedin.com/in/dimas-bagus-pratama-68a422312" target="_blank" class="social-link">
+                    <img src="image/link.png" alt="LinkedIn">
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
