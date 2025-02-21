@@ -29,7 +29,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 2000px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -81,16 +81,18 @@ body {
 .hero {
     background: linear-gradient(135deg, #1E1E1E, #2C2C2C); /* Dark Gray to Slightly Lighter Gray */
     color: #E0E0E0; /* Light Gray */
-    padding: 120px 0 50px;
+    padding: 20px 0 50px;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    margin-top: 0px;
 }
 
 .hero .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .hero-content {
@@ -98,7 +100,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 5rem;
     margin-bottom: 1rem;
     text-shadow: 0 0 10px rgba(74, 144, 226, 0.7); /* Subtle glow effect */
 }
@@ -137,8 +139,8 @@ body {
 
 /* Pulse Graphic */
 .graphic {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     position: relative;
@@ -482,7 +484,7 @@ body {
 /* Popup Message */
 .popup-message {
     position: fixed;
-    bottom: 20px;
+    top:20px;
     left: 50%;
     transform: translateX(-50%);
     background: #1E1E1E; /* Dark Gray */
@@ -493,7 +495,7 @@ body {
     font-weight: bold;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     opacity: 1;
-    transition: opacity 0.5s ease -in-out;
+    transition: opacity 1s ease -in-out;
     z-index: 1000;
 }
 
@@ -771,8 +773,6 @@ body {
 }
 
 /* Flip Card Animation */
-/* Flip Card Animation */
-/* Flip Card Animation */
 .skill-card, .project-card {
     perspective: 1000px; /* Menentukan perspektif untuk efek 3D */
     width: 100%;
@@ -782,7 +782,16 @@ body {
     transition: transform 0.8s ease;
 }
 
-.skill-card.flipped, .project-card.flipped {
+.skill-card-inner, .project-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.skill-card.flipped .skill-card-inner,
+.project-card.flipped .project-card-inner {
     transform: rotateY(180deg); /* Membalik card saat class 'flipped' ditambahkan */
 }
 
@@ -823,4 +832,11 @@ body {
 .skill-card, .project-card {
     opacity: 0; /* Mulai dengan card tersembunyi */
     animation: fadeInUp 0.8s ease-out forwards; /* Animasi muncul saat scroll */
+}
+
+.contact-me {
+    padding: 10px;
+    background-color: #6A5ACD;
+    border-radius: 15px;
+
 }
